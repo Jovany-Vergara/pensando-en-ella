@@ -87,6 +87,9 @@ body {
   .heart {
     animation: beat-small 1s infinite;
   }
+  .carousel-item img {
+    height: 115px;
+  }
 }
 
 @keyframes beat-small {
