@@ -1,0 +1,102 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+}
+
+.heart {
+  position: relative;
+  width: 300px; /* Aumenta el tamaño del corazón */
+  height: 270px; /* Aumenta el tamaño del corazón */
+}
+
+.heart::before, .heart::after {
+  position: absolute;
+  content: "";
+  top: 40px; /* Ajusta la posición para el tamaño más grande */
+  width: 156px; /* Aumenta el tamaño del corazón */
+  height: 240px; /* Aumenta el tamaño del corazón */
+  border-radius: 100px 100px 0 0;
+  background: red;
+}
+
+.heart::before {
+  left: 150px; /* Ajusta la posición para el tamaño más grande */
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.heart {
+  animation: beat 1s infinite;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.neon-text {
+  font-size: 2em;
+  color: #ffffff;
+  text-align: center;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 15px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000,
+    0 0 40px #ff0000;
+  margin-bottom: 20px; /* Espacio entre el texto y el corazón */
+}
+
+#carouselExampleIndicators {
+  margin-top: 50px; /* Ajusta este valor para cambiar la separación */
+}
+
+.carousel-item img {
+  height: 180px; /* Ajusta este valor para cambiar la altura de las imágenes */
+  width: auto; /* Ajusta este valor para cambiar la anchura de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes se redimensionen correctamente */
+}
+
+.hidden {
+  display: none;
+}
+.mt-5 {
+  margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  .heart {
+    animation: beat-small 1s infinite;
+  }
+}
+
+@keyframes beat-small {
+  0% {
+    transform: scale(0.3); /* Hace el corazón un 70% más pequeño */
+  }
+  50% {
+    transform: scale(0.5); /* Hace el corazón un 50% más pequeño */
+  }
+  100% {
+    transform: scale(0.3); /* Hace el corazón un 70% más pequeño */
+  }
+}
