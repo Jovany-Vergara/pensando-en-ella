@@ -71,7 +71,7 @@ body {
 }
 
 .carousel-item img {
-  height: 140px; /* Ajusta este valor para cambiar la altura de las imágenes */
+  height: 180px; /* Ajusta este valor para cambiar la altura de las imágenes */
   width: auto; /* Ajusta este valor para cambiar la anchura de las imágenes */
   object-fit: cover; /* Asegura que las imágenes se redimensionen correctamente */
 }
@@ -88,7 +88,7 @@ body {
     animation: beat-small 1s infinite;
   }
   .carousel-item img {
-    height: 100px;
+    height: 120px;
   }
 }
 
